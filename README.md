@@ -11,7 +11,93 @@ Identify how create APIs in Symfony, creating and reading post and only reading 
 2. Navegate to the project directory
 3. Run `composer install` to install the dependencies.
 4. Configure your environment variables.
-  
+
+## API Reference
+
+### Category
+| Type | Path |Description| Params   
+|:-|:-|:-|:-
+| `GET` | `/api/categories`|All categories|
+
+```json
+{
+  "id": 0,
+  "name": "string",
+  "posts": [
+    "string"
+  ]
+}
+```
+
+| Type | Path |Description| Params   
+|:-|:-|:-|:-
+| `GET` | `/api/categories/{id}`|Category id|An specific category|
+```json
+{
+  "id": 0,
+  "name": "string",
+  "posts": [
+    "string"
+  ]
+}
+```
+##
+### Post
+| Type | Path |Description| Params   
+|:-|:-|:-|:-
+| `GET` | `/api/posts`|All posts|
+```json
+{
+    "id": 0,
+    "title": "string",
+    "category": {
+      "id": 0,
+      "name": "string"
+    },
+    "summary": "string"
+  }
+```
+
+| Type | Path |Description| Params   
+|:-|:-|:-|:-|
+| `GET` | `/api/posts/{id}`|Post id|An specific post| id
+```json
+{
+  "id": 0,
+  "title": "string",
+  "body": "string",
+  "category": {
+    "id": 0,
+    "name": "string"
+  }
+}
+```
+
+| Type | Path |Description| Params   
+|:-|:-|:-|:-
+| `POST` | `/api/posts`|Create a post| title, body, category
+```json
+{
+  "id": 0,
+  "title": "string",
+  "body": "string",
+  "category": "string",
+  "summary": "string"
+}
+```
+
+| Type | Path |Description| Params   
+|:-|:-|:-|:-
+| `PATCH` | `/api/posts/{id}`|Update a post| id, title, body, category
+```json
+{
+  "id": 0,
+  "title": "string",
+  "body": "string",
+  "category": "string",
+  "summary": "string"
+}
+```
 
 ## Links
 

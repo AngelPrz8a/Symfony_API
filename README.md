@@ -31,7 +31,7 @@ Identify how create APIs in Symfony, creating and reading post and only reading 
 
 | Type | Path |Description| Params   
 |:-|:-|:-|:-
-| `GET` | `/api/categories/{id}`|Category id|An specific category|
+| `GET` | `/api/categories/{id}`|An specific category|id
 ```json
 {
   "id": 0,
@@ -60,7 +60,7 @@ Identify how create APIs in Symfony, creating and reading post and only reading 
 
 | Type | Path |Description| Params   
 |:-|:-|:-|:-|
-| `GET` | `/api/posts/{id}`|Post id|An specific post| id
+| `GET` | `/api/posts/{id}`|An specific post| id
 ```json
 {
   "id": 0,
